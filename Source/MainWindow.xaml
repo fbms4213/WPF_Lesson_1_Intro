@@ -1,0 +1,102 @@
+﻿<Window x:Class="Source.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Source"
+        mc:Ignorable="d"
+        Title="Intro" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    
+    <Grid Name="container">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <!--<Label FontStretch="UltraCondensed">
+            <Label.Background>
+                <SolidColorBrush Color="AliceBlue"></SolidColorBrush>
+            </Label.Background>
+            <Label.Content> Hakuna matata </Label.Content>
+            <Label.FontSize> 42</Label.FontSize>
+        </Label>-->
+
+
+
+        <!--<Label x:Name="lbl_content"  
+             Background="LightCoral"
+             FontSize="42"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             Content="Hello WPF"
+             Height="100"
+             Width="200">
+        </Label>-->
+
+
+        <Label
+             FontSize="42"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             Content="Hello WPF" 
+             BorderThickness="5"
+             BorderBrush="#FFCA2828" 
+            Foreground="#FFF1EBEB" Panel.ZIndex="1">
+            <Label.Background>
+                <ImageBrush ImageSource="/TASK - Bilyard.jpg" Stretch="UniformToFill"/>
+            </Label.Background>
+
+        </Label>
+
+
+        <Button Grid.Column="2" Background="BurlyWood"></Button>
+        <Button Grid.Column="1" Background="Maroon"></Button>
+        <Button Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Background="LightSkyBlue"></Button>
+        <Button Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Background="Peru"></Button>
+
+
+        <Button Click="Button_Click"
+            Grid.Column="1" 
+            Grid.Row="1" 
+            Background="LimeGreen"
+            Margin="15 5"
+            Padding="0 15"
+            Cursor="Hand"
+            Content="Click me"
+            FontSize="80">
+        </Button>
+
+
+
+
+
+
+
+        <x:Code>
+
+            <![CDATA[
+            
+            private void Button_Click(object sender, RoutedEventArgs e)
+            {
+                MessageBox.Show("Test", "Caption", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+            }
+            
+            ]]>
+
+        </x:Code>
+
+
+
+
+
+
+    </Grid>
+</Window>
